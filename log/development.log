@@ -73,3 +73,47 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-02 15:08:38 -0700
+
+
+Started POST "/users" for ::1 at 2016-06-02 15:12:23 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC1aWrib67jVh3kGyHqO47eY04zkx3wdSugwTrVauE4Sl70Rw8XrGyurrq6tqdLaeEswzifknCX61JyMnfJkhQ==", "user"=>{"username"=>"test", "email"=>"test@gmail.com", "first_name"=>"test", "last_name"=>"test", "birthday"=>"", "city"=>"test", "state"=>"test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `user_params' for #<UsersController:0x007fee46bd14b0>):
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.9ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (163.1ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/malanimalasuriya/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (291.7ms)
+
+
+Started POST "/users" for ::1 at 2016-06-02 15:15:16 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xC1aWrib67jVh3kGyHqO47eY04zkx3wdSugwTrVauE4Sl70Rw8XrGyurrq6tqdLaeEswzifknCX61JyMnfJkhQ==", "user"=>{"username"=>"test", "email"=>"test@gmail.com", "first_name"=>"test", "last_name"=>"test", "birthday"=>"", "city"=>"test", "state"=>"test", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: username
+  [1m[35m (11.5ms)[0m  BEGIN
+  [1m[36mUser Exists (41.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (14.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'test@gmail.com' LIMIT 1
+  [1m[36mSQL (34.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "city", "state", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "test"], ["last_name", "test"], ["city", "test"], ["state", "test"], ["email", "test@gmail.com"], ["password_digest", "$2a$10$NNxVO/qFk.FwZHOogxe79utb56jygXKqlKGg2lI15p.49c9NuV.OG"], ["created_at", "2016-06-02 22:15:17.353250"], ["updated_at", "2016-06-02 22:15:17.353250"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 359ms (ActiveRecord: 108.6ms)
+
+
+Started GET "/" for ::1 at 2016-06-02 15:15:17 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (9.9ms)
+  Rendered users/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 72ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (6.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
