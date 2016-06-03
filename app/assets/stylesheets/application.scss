@@ -16,3 +16,23 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ ////// nav bar /////
+  .navbar {
+  	margin-bottom: 0;
+  	padding-bottom: 0;
+  }
+
+
+ ///// basic styles /////
+  .left {
+  	text-align: left;
+  }
+
+  .center {
+  	text-align: center;
+  }
+
+  .right {
+  	text-align: right;
+  }
