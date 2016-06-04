@@ -17,12 +17,29 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- ////// nav bar /////
+////// nav bar /////
   .navbar {
   	margin-bottom: 0;
   	padding-bottom: 0;
   }
 
+/////main page view /////
+  .container{
+  	padding-bottom: 5%;
+  }
+
+  ////// footer /////
+  #footer {
+  	height: 10vh;
+  	padding-top: 1%;
+    padding-bottom: 1%;
+  	background-color: #d6f5f5;
+  }
+
+  .footer-text {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
  ///// basic styles /////
   .left {
