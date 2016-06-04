@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   get '/sign_up' => 'users#new'
+  delete '/logout' => 'sessions#destroy'
   resources :users
   resources :sessions
 
