@@ -14,7 +14,6 @@ class ItemsController < ApplicationController
   def show
     @user = current_user
     @item = Item.find(params[:id])
-
   end
 
   def new
