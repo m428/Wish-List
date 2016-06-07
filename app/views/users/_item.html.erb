@@ -32,7 +32,7 @@
           <td><%= item.created_at.strftime("%b %-d, %Y") %></td>
           <td><%= item.title %></td>
           <td><%= item.category %></td>
-          <td><%= item.cost %></td>
+          <td>$<%= item.cost %></td>
           <td><%= item.seller %></td>
           <td><%= item.note %></td>
           <td class="items-ved"><%= link_to image_tag("list.png"), user_item_path(@user, item.id), :class => "entry-icons" %></td>

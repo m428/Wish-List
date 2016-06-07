@@ -28,13 +28,15 @@
           <td><%= item.created_at.strftime("%b %-d, %Y") %></td>
           <td><%= item.title %></td>
           <td><%= item.category %></td>
-          <td><%= item.cost %></td>
+          <td>$<%= item.cost %></td>
           <td><%= item.seller %></td>
           <td><%= item.note %></td>
           <td class="items-ved"><%= link_to image_tag("list.png"), user_item_path(@user, item.id), :class => "entry-icons" %></td>
           <td class="items-ved"><%= link_to image_tag("edit.png"), edit_user_item_path(@user, item.id), :class => "entry-icons" %></td>
           <td class="items-ved"><%= link_to image_tag("trash.png"), user_item_path(@user, item.id), :class => "entry-icons",  method: :delete, data: {confirm: "Are you sure?"} %></td>
         </tr>
+        <% else %>
+        <div>No results found! Please try again or broaden your search.</div>
         <% end %>
         <% end %>
 
