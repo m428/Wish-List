@@ -1,2 +1,21 @@
 <h1>Items#show</h1>
 <p>Find me in app/views/items/show.html.erb</p>
+
+
+
+
+
+<div class="container">
+
+<p>ITEM: <%= @item.title %></p> <br>
+<p>COST: <%= "$#{@item.cost}"%></p> <br>
+<p>SELLER: <%= @item.seller %></p> <br>
+<p>CATEGORY: <%= @item.category %></p> <br>
+<p>NOTES: <%= @item.note %> <br>
+
+
+  <%= link_to "Back", user_path(@user) %>
+  <%= link_to "Edit", edit_user_item_path(@user, @item) %>
+  <%= link_to "Delete", user_item_path(@user, @item), method: :delete, data: {confirm: "Are you sure?"} %>
+
+</div>

@@ -1,6 +1,15 @@
 class ItemsController < ApplicationController
-  def index
-  end
+
+  include ItemsHelper
+  include SessionsHelper
+
+
+  before_filter :require_login, only: [:new, :create, :update, :destroy]
+
+
+  #
+  # def index
+  # end
 
   def show
     @user = current_user

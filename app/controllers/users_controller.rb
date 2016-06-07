@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  include UsersHelper
+
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
   def index
     @users = User.all
     render :index
@@ -37,7 +42,7 @@ class UsersController < ApplicationController
    	 @user = User.find(params[:id])
   end
 
-  def user_params
-	params.require(:user).permit(:first_name, :last_name, :username, :birthday, :city, :state, :email, :password, :password_confirmation)
-  end
+  # def user_params
+	#    params.require(:user).permit(:first_name, :last_name, :username, :birthday, :city, :state, :email, :password, :password_confirmation)
+  # end
 end
