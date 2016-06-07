@@ -1,10 +1,4 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
-
-
-<h1>Hello! <%= @user.username %></h1>
-
-<h3>My List</h3>
 <%= render partial: "/users/item", locals: {user_items: @user.items} %>
-
 <span>ADD ITEM&nbsp;<%= link_to image_tag("new.png"), new_user_item_path(@user), class: "items-nved" %> </span>

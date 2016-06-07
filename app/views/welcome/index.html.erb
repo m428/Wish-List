@@ -6,23 +6,30 @@
   </div>
   <div id="catchPhrase" class="container">
     <h3>Wish List is an easy way to track anything you want and share your wish list for special occassions like birthdays, weddings, graduations, kickstarters, and baby shower.</h3>
-    <div class="row">
       <% if logged_in? %>
+      <div class="row">
       <% @user = current_user %>
+        <div class="col=xs-12 center">
+          <h1 class="center">Hello! <%= @user.username %></h1>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-xs-6 center">
-            <button><%= link_to "My List", user_path(@user) %></button>
+          <button><%= link_to "My List", user_path(@user) %></button>
         </div>
         <div class="col-xs-6 center">
-            <button><%= link_to "Search", users_path %></button>
+          <button><%= link_to "Search", users_path %></button>
         </div>
+      </div>
       <% else %>
+      <div class="row">
         <div class="col-xs-6 center">
-            <button><%= link_to "Log In", new_session_path %></button>
+          <button><%= link_to "Log In", new_session_path %></button>
         </div>
         <div class="col-xs-6 center">
-            <button><%= link_to "Sign Up", new_user_path %></button>
+          <button><%= link_to "Sign Up", new_user_path %></button>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </section>

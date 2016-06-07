@@ -3,13 +3,10 @@ class ItemsController < ApplicationController
   include ItemsHelper
   include SessionsHelper
 
-
   before_filter :require_login, only: [:new, :create, :update, :destroy]
 
-
-  #
-  # def index
-  # end
+  def index
+  end
 
   def show
     @user = current_user
@@ -26,7 +23,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user_id = params[:user_id] # set user_id param from database relationship to current_user id
     @item.save
-    redirect_to user_item_path(@user, @item) #goes to items show page http://localhost:3000/users/1/items/24
+    redirect_to user_path(@user) #goes to items show page http://localhost:3000/users/1/items/24
   end
 
   def edit
