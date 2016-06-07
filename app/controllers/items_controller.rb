@@ -6,6 +6,13 @@ class ItemsController < ApplicationController
   before_filter :require_login, only: [:new, :create, :update, :destroy]
 
   def index
+    @user = current_user
+    @item = Item.search(params[:search])
+    if params[:search]
+      @items = Item.search(params[:search]).order("date DESC")
+    else
+      @items = Item.all.order('date DESC')
+    end
   end
 
   def show
