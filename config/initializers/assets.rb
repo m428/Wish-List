@@ -14,4 +14,5 @@ Rails.application.config.assets.precompile += %w(
 welcome.css
 users.css
 sessions.css
+items.css
 )

@@ -1,6 +1,5 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
-
 <section>
   <div class="jumbotron">
     <h1 class="center">Wish List!</h1>
@@ -8,12 +7,22 @@
   <div id="catchPhrase" class="container">
     <h3>Wish List is an easy way to track anything you want and share your wish list for special occassions like birthdays, weddings, graduations, kickstarters, and baby shower.</h3>
     <div class="row">
-      <div class="col-xs-6 centered">
-        <button><%= link_to "Log In", new_session_path %></button>
-      </div>
-      <div class="col-xs-6 centered">
-        <button><%= link_to "Sign Up", new_user_path %></button>
-      </div>
+      <% if logged_in? %>
+      <% @user = current_user %>
+        <div class="col-xs-6 center">
+            <button><%= link_to "My List", user_path(@user) %></button>
+        </div>
+        <div class="col-xs-6 center">
+            <button><%= link_to "Search", users_path %></button>
+        </div>
+      <% else %>
+        <div class="col-xs-6 center">
+            <button><%= link_to "Log In", new_session_path %></button>
+        </div>
+        <div class="col-xs-6 center">
+            <button><%= link_to "Sign Up", new_user_path %></button>
+        </div>
+      <% end %>
     </div>
   </div>
 </section>
