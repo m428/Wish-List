@@ -1,2 +1,38 @@
 <h1>Users#index</h1>
 <p>Find me in app/views/users/index.html.erb</p>
+
+<div class="container">
+  <h1>My Search Results</h1>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Entry&nbsp;Date</th>
+          <th>Item</th>
+          <th>Category</th>
+          <th>Cost</th>
+          <th>Seller</th>
+          <th>Notes</th>
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% user_items.each do |item| %>
+        <tr>
+          <td><%= item.created_at.strftime("%b %-d, %Y") %></td>
+          <td><%= item.title %></td>
+          <td><%= item.category %></td>
+          <td><%= item.cost %></td>
+          <td><%= item.seller %></td>
+          <td><%= item.note %></td>
+          <td class="items-ved"><%= link_to image_tag("list.png"), user_item_path(@user, item.id), :class => "entry-icons" %></td>
+          <td class="items-ved"><%= link_to image_tag("edit.png"), edit_user_item_path(@user, item.id), :class => "entry-icons" %></td>
+          <td class="items-ved"><%= link_to image_tag("trash.png"), user_item_path(@user, item.id), :class => "entry-icons",  method: :delete, data: {confirm: "Are you sure?"} %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
