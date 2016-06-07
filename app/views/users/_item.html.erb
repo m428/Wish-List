@@ -1,15 +1,16 @@
 <h5>Users#Show - Item Partial Template</h5>
 <p>Find me in app/views/users/_item.html.erb</p>
 
-<span class="search-container">
-   <%= form_tag user_items_path(@user, @item), :method => 'get' do %>
-     <%= text_field_tag :search, params[:search], :placeholder => "SEARCH", class: "search-field" %>
-     <% submit_tag "SEARCH" %>
-   <% end %>
- </span>
-
 <div class="container">
   <h1>My Wish List</h1>
+  <span class="search-container">
+     <%= form_tag user_items_path(@user, @item), :method => 'get' do %>
+       <%= text_field_tag :search, params[:search], :placeholder => "SEARCH", class: "search-field" %>
+       <% submit_tag "SEARCH" %>
+     <% end %>
+   </span>
+   <span>ADD ITEM&nbsp;<%= link_to image_tag("new.png"), new_user_item_path(@user), class: "items-nved" %> </span>
+
   <div class="table-responsive">
     <table class="table">
       <thead>

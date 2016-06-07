@@ -1,7 +1,5 @@
 <h1>Items#index</h1>
 <p>Find me in app/views/items/index.html.erb</p>
-
-
 <div class="container">
   <h1>My Search Results</h1>
   <div class="table-responsive">
@@ -19,8 +17,13 @@
           <th>Delete</th>
         </tr>
       </thead>
+
+
       <tbody>
+
         <% @items.each do |item| %>
+        <% if item.user_id == session[:user_id] %>
+
         <tr>
           <td><%= item.created_at.strftime("%b %-d, %Y") %></td>
           <td><%= item.title %></td>
@@ -33,7 +36,13 @@
           <td class="items-ved"><%= link_to image_tag("trash.png"), user_item_path(@user, item.id), :class => "entry-icons",  method: :delete, data: {confirm: "Are you sure?"} %></td>
         </tr>
         <% end %>
+        <% end %>
+
       </tbody>
+
+
+
+
     </table>
   </div>
 </div>

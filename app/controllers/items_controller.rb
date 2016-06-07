@@ -8,7 +8,12 @@ class ItemsController < ApplicationController
   def index
     @user = current_user
     @item = Item.search(params[:search])
-    if params[:search]
+
+
+    # @item = @item.user_id(params[:user_id]) if params[:user_id].present?
+
+
+    if params[:search] #&& session[:user_id] == @item.id
       @items = Item.search(params[:search]).order("created_at DESC")
     else
       @items = Item.all.order('created_at DESC')
@@ -26,7 +31,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @user = current_user # give access to all the things
+    @user = current_user 
     @item = Item.new(item_params)
     @item.user_id = params[:user_id] # set user_id param from database relationship to current_user id
     @item.save
