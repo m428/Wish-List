@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @item = Item.new
     @item.user_id = @user.id
+
+    @birthday = countdown
   end
 
   def new
@@ -38,11 +40,8 @@ class UsersController < ApplicationController
   end
 
   private
+  
   def set_user
    	 @user = User.find(params[:id])
   end
-
-  # def user_params
-	#    params.require(:user).permit(:first_name, :last_name, :username, :birthday, :city, :state, :email, :password, :password_confirmation)
-  # end
 end

@@ -43,4 +43,28 @@
       </tbody>
     </table>
   </div>
-</div>
+
+  <!-- Loop through and sum each item cost. -->
+  <div id="total">
+     <% totCost = 0  %>
+     <% user_items.each do |item| %>
+       <% totCost += item.cost %>
+     <% end %>
+     <div id="total"><%= "Total Cost = $#{totCost}" %></div>
+  </div>
+
+  <!-- Display birthday. -->
+   <div id="birthday">
+    <%= @user.birthday.strftime("%b %-d, %Y")  %>
+  </div>
+
+  <div>
+    <% to_time = @user.birthday %>
+    <% from_time = Time.now %>
+    <%= distance_of_time_in_words(to_time, from_time + 60.days) %>
+  </div>
+
+  <!-- <%= @user.birthday.strftime("%b %-d, %Y")  %> -->
+  <!-- <%= @user.birthday.strftime("%D")  %> -->
+  <%= @birthday %> <!-- currently displays years not days - countdown method in UsersHelper-->
+</div><!-- end contianer -->
