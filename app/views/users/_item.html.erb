@@ -43,4 +43,19 @@
       </tbody>
     </table>
   </div>
+
+
+
+  <div id="total">
+     <% totCost = 0  %>
+     <% user_items.each do |item| %>
+       <% totCost += item.cost %>
+     <% end %>
+     <div id="total"><%= "Total Cost = $#{totCost}" %></div>
+   </div>
+
+
+
+
+
 </div>
