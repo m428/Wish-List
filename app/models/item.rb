@@ -2,6 +2,10 @@ class Item < ActiveRecord::Base
   belongs_to :user
 
 
+  before_save :default_values
+   def default_values
+     self.cost ||= 0
+   end
   # scope :user_id, -> (user_id) { where user_id: user_id}
 
   def self.search(search)
