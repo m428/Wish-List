@@ -23,31 +23,36 @@
   .row { margin-right: 0; margin-left: 0; }
 }
 
-////// nav bar /////
+html, body {
+  height: 100%;
+}
+
+///// navigation bar /////
   .navbar {
   	margin-bottom: 0;
   	padding-bottom: 0;
   }
 
-/////main page view /////
-  .container{
-  	padding-bottom: 5%;
+///// fFOOTER & MAIN PAGE WRAPPER /////
+  #wrap {   /* Apply wrap to flush footer to bottom of page */
+
+    min-height: 100%;
   }
 
-  ////// footer /////
-  #footer {
-  	height: 10vh;
-  	padding-top: 1%;
-    padding-bottom: 1%;
-  	background-color: #d6f5f5;
+  #main {
+    overflow:auto;
+    padding-bottom:150px; /* Should be larger than footer height */
   }
 
-  .footer-text {
-    margin-bottom: 0;
-    padding-bottom: 0;
+  .footer {
+    position: relative;
+    margin-top: -150px; /* Negative value of footer height */
+    height: 150px;
+    clear:both;
+    padding-top:20px;
   }
 
- ///// basic styles /////
+ ///// BASIC STYLES /////
   .left {
   	text-align: left;
   }
@@ -59,3 +64,87 @@
   .right {
   	text-align: right;
   }
+
+///// BUTTON STYLES /////
+
+.btn {
+	width: 200px;
+}
+
+.btn-primary {
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+	border-radius: 6px;
+	box-shadow: 1px 1px 1px #9E9E9E;
+	border:0.1em solid #ff4056;
+	background-color: #ff4056;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-weight: 300;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+	background-color: #ffffff;
+	border-color: #ff4056;
+	border:0.1em solid #ff4056;
+	box-shadow: none;
+  color: #ff4056;
+
+}
+
+.btn-primary:active {
+	background-color: #ffffff;
+	border-color: #ff4056;
+	border:0.1em solid #ff4056;
+	box-shadow: none;
+}
+
+
+.btn-primary:focus {
+	background-color: #ffffff;
+	border-color: #ff4056;
+	border:0.1em solid #ff4056;
+	box-shadow: none;
+	outline: none;
+	color: #ff4056;
+}
+
+.btn-primary.active {
+	background-color: #ffffff;
+	border-color: #ff4056;
+	border:0.1em solid #ff4056;
+	box-shadow: none;
+	outline: none;
+	color: #ff4056;
+}
+//
+// .btn-primary:active:focus {
+// 	background-color: #ffffff;
+// 	border-color: #ff4056;
+// 	border:0.1em solid #ff4056;
+// 	box-shadow: none;
+// 	outline: none;
+// 	color: #ff4056;
+// }
+
+.btn-primary.active:focus{
+	background-color: #ffffff;
+	border-color: #ff4056;
+	border:0.1em solid #ff4056;
+	box-shadow: none;
+	outline: none;
+	color: #ff4056;
+}
+//
+// .btn-primary:active:focus{
+// 	background-color: #ffffff;
+// 	border-color: #ff4056;
+// 	border:0.1em solid #ff4056;
+// 	box-shadow: none;
+// 	outline: none;
+// 	color: #ff4056;
+// }

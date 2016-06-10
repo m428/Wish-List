@@ -1,6 +1,6 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
-<section>
+<section id="wrap">
   <div class="jumbotron">
     <h1 class="center">Wish List!</h1>
   </div>
@@ -14,10 +14,10 @@
       </div>
       <div class="row">
         <div class="col-xs-6 center">
-          <button><%= link_to "My List", user_path(@user) %></button>
+          <%= link_to "My List", user_path(@user), class: "btn btn-primary" %>
         </div>
         <div class="col-xs-6 center">
-          <button><%= link_to "Search", users_path %></button>
+          <%= link_to "Search", users_path,  class: "btn btn-primary" %>
         </div>
       </div>
       <% else %>
@@ -25,10 +25,10 @@
         <h3>Wish List is an easy way to track anything you want and share your wish list for special occassions like birthdays, weddings, graduations, kickstarters, and baby shower.</h3>
 
         <div class="col-xs-6 center">
-          <button><%= link_to "Log In", new_session_path %></button>
+          <%= link_to "Log In", new_session_path,  class: "btn btn-primary" %>
         </div>
         <div class="col-xs-6 center">
-          <button><%= link_to "Sign Up", new_user_path %></button>
+          <%= link_to "Sign Up", new_user_path,  class: "btn btn-primary" %>
         </div>
       </div>
     <% end %>
