@@ -1,35 +1,66 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-<section>
+<!-- <h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p> -->
+<section id="wrap">
   <div class="jumbotron">
-    <h1 class="center">Wish List!</h1>
+    <h1 class="center">Wish List</h1>
+
+
+    <% if logged_in? %>
+    <div class="row">
+    <% @user = current_user %>
+      <div class="col=xs-12 center">
+        <div class="center">Hello <%= @user.username %>!</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 center">
+        <%= link_to "My List", user_path(@user), class: "btn btn-primary" %>
+      </div>
+      <div class="col-xs-6 center">
+        <%= link_to "Search", users_path,  class: "btn btn-primary" %>
+      </div>
+    </div>
+    <% else %>
+    <div class="row center">
+      <h3>Wish List is an easy and fun way to manage gift giving for any occasion. Track anything you want and share what you love with friends and loved ones. Wish List is perfect for birthdays, baby showers, holidays, wedding registries, graduation gifts, kickstarter campaigns, and so much more!</h3>
+    </div>
+    <div class="row btn-navigate">
+
+      <div class="col-xs-6 center">
+        <%= link_to "Log In", new_session_path,  class: "btn btn-primary" %>
+      </div>
+      <div class="col-xs-6 center">
+        <%= link_to "Sign Up", new_user_path,  class: "btn btn-primary" %>
+      </div>
+    </div>
+
+
+    <div class="row info">
+
+      <div class="col-xs-4 center ">
+        <%= image_tag("manage.png") %>
+        <p>Create lists and track the things you love.</p>
+      </div>
+
+      <div class="col-xs-4 center divider">
+        <%= image_tag("money.png") %>
+        <p>Manage your spending and save more.</p>
+
+      </div>
+
+      <div class="col-xs-4 center divider">
+        <%= image_tag("share.png") %>
+        <p>Make the gift giving process easier by sharing your list with friends.</p>
+      </div>
+    </div>
+
+
+
+  <% end %>
+
+
   </div>
-  <div id="catchPhrase" class="container">
-    <h3>Wish List is an easy way to track anything you want and share your wish list for special occassions like birthdays, weddings, graduations, kickstarters, and baby shower.</h3>
-      <% if logged_in? %>
-      <div class="row">
-      <% @user = current_user %>
-        <div class="col=xs-12 center">
-          <h1 class="center">Hello! <%= @user.username %></h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 center">
-          <button><%= link_to "My List", user_path(@user) %></button>
-        </div>
-        <div class="col-xs-6 center">
-          <button><%= link_to "Search", users_path %></button>
-        </div>
-      </div>
-      <% else %>
-      <div class="row">
-        <div class="col-xs-6 center">
-          <button><%= link_to "Log In", new_session_path %></button>
-        </div>
-        <div class="col-xs-6 center">
-          <button><%= link_to "Sign Up", new_user_path %></button>
-        </div>
-      </div>
-    <% end %>
-  </div>
+
+
+
 </section>

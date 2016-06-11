@@ -14,42 +14,146 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
 
-////// nav bar /////
-  .navbar {
-  	margin-bottom: 0;
-  	padding-bottom: 0;
-  }
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Sacramento|Leckerli+One|Dosis:400,600|Poppins:400,600);
 
-/////main page view /////
-  .container{
-  	padding-bottom: 5%;
-  }
 
-  ////// footer /////
-  #footer {
-  	height: 10vh;
-  	padding-top: 1%;
-    padding-bottom: 1%;
-  	background-color: #d6f5f5;
-  }
+@media (min-width: 768px) {
+  .row { margin-right: 0; margin-left: 0; }
+}
 
-  .footer-text {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
 
- ///// basic styles /////
-  .left {
-  	text-align: left;
-  }
+///// NAVIGATION BAR /////
+.navbar {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border: 0;
+	border-radius: 0;
+}
 
-  .center {
-  	text-align: center;
-  }
+.navbar-brand {
+  font-family: 'Leckerli One', cursive;
+  font-size: 20pt;
+}
 
-  .right {
-  	text-align: right;
-  }
+.navbar-header .navbar-brand, .navbar-header .navbar-brand:hover {
+	color: #FFEBEE;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #FF4081;
+  background-color: #FFEBEE;
+}
+
+.navbar-default {
+  background-color:#FF4081;
+}
+
+Sets dropdown text color and background on hover
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #FFEBEE;
+  text-decoration: none;
+  background-color: #FF4081;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #FFEBEE; /* Change active text color. */
+}
+
+///// FOOTER & MAIN PAGE WRAPPER /////
+#wrap {   /* Apply wrap to flush footer to bottom of page. */
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:50px; /* Should be larger than footer height. */
+}
+
+#footer {
+  position: relative;
+  margin-top: -50px; /* Negative value of footer height. */
+  height: 50px;
+  clear:both;
+  padding-top:20px;
+  background-color: #FF4081; //#FF80AB;
+  color: #FFEBEE;
+}
+
+ ///// BASIC STYLES /////
+.left {
+	text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+///// BUTTON STYLES /////
+.btn {
+	width: 200px;
+}
+
+.btn-primary {
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+	border-radius: 0px;
+	box-shadow: 1px 1px 1px #FF4081;
+	border:0.1em solid #FF4081;
+	background-color: #FF4081;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-weight: 300;
+  color: #FFEBEE;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active:focus {
+	background-color: #FFEBEE;
+	border-color: #FFEBEE;
+	border:0.1em solid #FFEBEE;
+	box-shadow: none;
+	outline: none;
+	color: #FF4081;
+}
+
+
+
+.btn-soft {
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+	border-radius: 0px;
+	box-shadow: 1px 1px 1px #FFEBEE;
+	border:0.1em solid #FFEBEE;
+	background-color: #FFEBEE;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-weight: 300;
+  color: #FF4081;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-soft:hover, .btn-soft:focus, .btn-soft:active, .btn-soft:active:focus {
+	background-color: #FF4081;
+	border-color: #FF4081;
+	border:0.1em solid #FF4081;
+	box-shadow: none;
+	outline: none;
+	color: #FFEBEE;
+}
