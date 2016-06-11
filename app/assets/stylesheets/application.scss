@@ -18,14 +18,16 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
- @import url(https://fonts.googleapis.com/css?family=Sacramento|Satisfy|Leckerli+One);
-
- @media (min-width: 768px) {
+ // @import url(https://fonts.googleapis.com/css?family=Sacramento|Satisfy|Leckerli+One);
+  @import url(https://fonts.googleapis.com/css?family=Sacramento|Leckerli+One|Dosis:400,600|Poppins:400,600);
+  @media (min-width: 768px) {
   .row { margin-right: 0; margin-left: 0; }
 }
 
 html, body {
   height: 100%;
+  font-family: 'Poppins', sans-serif;
+  // font-family: 'Dosis', sans-serif;
 }
 
 ///// NAVIGATION BAR /////
