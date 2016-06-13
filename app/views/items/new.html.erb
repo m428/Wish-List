@@ -1,36 +1,29 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
-
-<section>
-  <div class="container">
-    <div class="col-xs-8 col-xs-offset-2">
-      <h1>Add An Item!!!</h1>
+<section id="wrap">
+  <div class="container items center">
+      <h1>New Item</h1>
       <%= form_for [@user, @item] do |p| %>
-        <%= p.label :title %>
-        <%= p.text_field :title, placeholder: "ITEM NAME", class:'form-control', autofocus: true %>
+        <%= p.label :title, class:"form-label" %></br>
+        <%= p.text_field :title, placeholder: "e.g. Fitbit", class:'form-control', autofocus: true %>
         <br>
-        <%= p.label :category %>
-        <%= p.text_field :category, placeholder: "CATEGORY", class:'form-control' %>
+        <%= p.label :category, class:"form-label" %>
+        <%= p.text_field :category, placeholder: "e.g. Fitness & Athletic Gear", class:'form-control' %>
         <br>
-        <%= p.label :cost %>
-        <%= p.text_field :cost, placeholder: "COST", class:'form-control'%>
+        <%= p.label :cost, class:"form-label" %>
+        <%= p.text_field :cost, placeholder: "e.g. 109", class:'form-control'%>
         <br>
-        <%= p.label :note %>
-        <%= p.text_field :note, placeholder: "NOTE", class:'form-control'%>
+        <%= p.label :note, class:"form-label" %>
+        <%= p.text_field :note, placeholder: "e.g. I love the Fitbit Alta in teal.", class:'form-control'%>
         <br>
-        <%= p.label :seller %>
-        <%= p.text_field :seller, placeholder: "SELLER", class:'form-control' %>
+        <%= p.label :seller, class:"form-label" %>
+        <%= p.text_field :seller, placeholder: "e.g. Fitbit", class:'form-control' %>
         <br>
-        <%= p.label :link %>
-        <%= p.text_field :link, placeholder: "LINK", class:'form-control' %>
+        <%= p.label :link, class:"form-label" %>
+        <%= p.text_field :link, placeholder: "e.g. https://www.fitbit.com/alta", class:'form-control' %>
         <br>
-
-        <div class="text-right">
-          <%= p.submit "Create", class: 'btn btn-primary' %>
-        </div>
-        <% end %>
-
-    </div>
-
+        <div class="actions">
+          <%= link_to "CANCEL", user_path(@user), class: "btn-form" %>
+          <%= p.submit "CREATE", class: "btn-form cancel" %>
+      </div>
+    <% end %>
   </div>
 </section>

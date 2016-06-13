@@ -1,17 +1,64 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<!-- <h1>Items#show</h1>
+<p>Find me in app/views/items/show.html.erb</p> -->
+
+
+<section id="wrap">
+  <div class="show-item">
+
+  <h1 class="center">Now Viewing:  <%= @item.title %></h1>
+
+
+  <div class="row">
+    <div class="col-xs-12 left">
+      <p>DATE: <%= @item.created_at.strftime("%B %-d, %Y") %> <br>
+
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-xs-12 left">
+    <p>COST: <%= "$#{@item.cost}"%></p> <br>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12 left">
+    <p>SELLER: <%= @item.seller %></p> <br>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 left">
+    <p>CATEGORY: <%= @item.category %></p> <br>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 l">
+    <p>NOTES: <%= @item.note %> <br>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 left">
+    <p>LINK: <%= @item.link %> <br>
+
+  </div>
+</div>
 
 
 
 
 
-<div class="container">
 
-<p>ITEM: <%= @item.title %></p> <br>
-<p>COST: <%= "$#{@item.cost}"%></p> <br>
-<p>SELLER: <%= @item.seller %></p> <br>
-<p>CATEGORY: <%= @item.category %></p> <br>
-<p>NOTES: <%= @item.note %> <br>
+
+
+
 
 
   <%= link_to "Back", user_path(@user) %>
@@ -19,3 +66,4 @@
   <%= link_to "Delete", user_item_path(@user, @item), method: :delete, data: {confirm: "Are you sure?"} %>
 
 </div>
+</section>
