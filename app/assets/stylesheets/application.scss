@@ -99,6 +99,10 @@ Sets dropdown text color and background on hover
 	text-align: right;
 }
 
+.justify {
+  text-align: justify;
+}
+
 ///// BUTTON STYLES /////
 .btn {
 	width: 200px;
@@ -156,4 +160,10 @@ Sets dropdown text color and background on hover
 	box-shadow: none;
 	outline: none;
 	color: #FFEBEE;
+}
+
+///// ICONS /////
+.entry-icons img, .items-nved img {
+width: 30px;
+height: 30px;
 }

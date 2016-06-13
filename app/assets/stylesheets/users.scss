@@ -1,3 +1,67 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+section {
+  // color: #00B8D4;
+  color: #FF4081;
+}
+
+th {
+  font-size: 12pt;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  border-top: 2px solid #FFEBEE;
+}
+
+.table-row {
+  border-bottom: 3px solid #FFEBEE;
+
+}
+
+.list-view {
+  margin-top: 3%;
+}
+
+.list-actions {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 16pt;
+  color: #FF4081;
+}
+
+.search-field {
+  font-size: 12pt;
+}
+
+.list-h1 {
+  color: #FF4081;
+  font-size: 32pt;
+  font-family: 'Leckerli One', cursive;
+  text-shadow: 3px 3px #B2EBF2;
+}
+
+.search-field {
+  color: #FF4081;
+  border:0.1em solid #FF4081;
+}
+
+
+.search-field:active, .search-field:hover, .search-field:focus {
+  color: #FF4081;
+  outline: none;
+}
+
+.summary {
+  margin-top: 2%;
+  background-color: #FF4081;
+  color: #FFFFFF;
+  height: 40px;
+  padding-top: 10px;
+}
+.emphasis {
+  font-size: 13pt;
+  // color: #FF4081;
+  font-weight: bold;
+}

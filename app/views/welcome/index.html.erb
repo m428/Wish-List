@@ -3,8 +3,6 @@
 <section id="wrap">
   <div class="jumbotron">
     <h1 class="center">Wish List</h1>
-
-
     <% if logged_in? %>
     <div class="row">
     <% @user = current_user %>
@@ -21,11 +19,27 @@
       </div>
     </div>
     <% else %>
-    <div class="row center">
-      <h3>Wish List is an easy and fun way to manage gift giving for any occasion. Track anything you want and share what you love with friends and loved ones. Wish List is perfect for birthdays, baby showers, holidays, wedding registries, graduation gifts, kickstarter campaigns, and so much more!</h3>
-    </div>
-    <div class="row btn-navigate">
 
+    <div class="info-wrapper">
+      <div class="row info center">
+        <h3>Wish List is a fun and easy way to manage gift giving for any occasion!</h3>
+      </div>
+      <div class="row info">
+        <div class="col-xs-4 center ">
+          <%= image_tag("manage.png") %>
+          <p>Create lists, track anything you want, and share the things you love with friends and loved ones.</p>
+        </div>
+        <div class="col-xs-4 center divider">
+          <%= image_tag("money.png") %>
+          <p>Manage your spending and save more. Wish List conveniently counts and totals everything you input. </p>
+        </div>
+        <div class="col-xs-4 center divider">
+          <%= image_tag("share.png") %>
+          <p>Make the gift giving process easier by sharing your list with friends and finding friends on Wish List.</p>
+        </div>
+      </div>
+    </div>     <!-- end info wrapper -->
+    <div class="row btn-navigate">
       <div class="col-xs-6 center">
         <%= link_to "Log In", new_session_path,  class: "btn btn-primary" %>
       </div>
@@ -33,34 +47,6 @@
         <%= link_to "Sign Up", new_user_path,  class: "btn btn-primary" %>
       </div>
     </div>
-
-
-    <div class="row info">
-
-      <div class="col-xs-4 center ">
-        <%= image_tag("manage.png") %>
-        <p>Create lists and track the things you love.</p>
-      </div>
-
-      <div class="col-xs-4 center divider">
-        <%= image_tag("money.png") %>
-        <p>Manage your spending and save more.</p>
-
-      </div>
-
-      <div class="col-xs-4 center divider">
-        <%= image_tag("share.png") %>
-        <p>Make the gift giving process easier by sharing your list with friends.</p>
-      </div>
-    </div>
-
-
-
   <% end %>
-
-
   </div>
-
-
-
 </section>
