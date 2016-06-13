@@ -31,10 +31,6 @@ th {
   color: #FF4081;
 }
 
-.search-field {
-  font-size: 12pt;
-}
-
 .list-h1 {
   color: #FF4081;
   font-size: 32pt;
@@ -45,8 +41,8 @@ th {
 .search-field {
   color: #FF4081;
   border:0.1em solid #FF4081;
+  font-size: 12pt;
 }
-
 
 .search-field:active, .search-field:hover, .search-field:focus {
   color: #FF4081;
@@ -62,6 +58,5 @@ th {
 }
 .emphasis {
   font-size: 13pt;
-  // color: #FF4081;
   font-weight: bold;
 }
