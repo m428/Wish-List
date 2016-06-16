@@ -25,10 +25,14 @@
     </div>
     <!-- Add item and search items. -->
     <div class="row list-actions">
-      <div class="col-xs-6 center">
+      <div class="col-xs-4 center">
         <span>ADD ITEM&nbsp;<%= link_to image_tag("new.png"), new_user_item_path(@user), class: "items-nved" %> </span>
       </div>
-      <div class="col-xs-6 center">
+      <div class="col-xs-4 center">
+        <%= link_to "HOME ★彡", root_url, class: "home" %>
+      </div>
+
+      <div class="col-xs-4 center">
         <span class="search-container">
            <%= form_tag user_items_path(@user, @item), :method => 'get' do %>
              SEARCH <%= text_field_tag :search, params[:search], :placeholder => "  e.g. Fitbit", class: "search-field" %>
@@ -38,19 +42,19 @@
       </div>
     </div>
     <!-- Items table. -->
-    <div class="table-responsive ">
+    <div class="table-responsive center">
       <table class="table">
         <thead>
           <tr class="table-row">
-            <th>Entry&nbsp;Date</th>
-            <th>Item</th>
-            <th>Category</th>
-            <th>Cost</th>
-            <th>Seller</th>
-            <th>Notes</th>
-            <th>View</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>ENTRY&nbsp;DATE</th>
+            <th>ITEM</th>
+            <th>CATEGORY</th>
+            <th>COST</th>
+            <th>SELLER</th>
+            <th>NOTES</th>
+            <th>VIEW</th>
+            <th>EDIT</th>
+            <th>REMOVE</th>
           </tr>
         </thead>
         <tbody>

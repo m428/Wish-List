@@ -2,21 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.users {
+  background-color: #FF4081;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 30%;
+  margin-left: 38%;
+  margin-right: 40%;
+}
+
+.h1-form {
+  color: #FFFFFF;
+  font-family: 'Leckerli One', cursive;
+}
+
 section {
-  // color: #00B8D4;
   color: #FF4081;
 }
 
 th {
   font-size: 12pt;
+  text-align: center;
 }
 
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
-  border-top: 2px solid #FFEBEE;
+  border-top: 2px solid #FF4081;
 }
 
 .table-row {
-  border-bottom: 3px solid #FFEBEE;
+  border-bottom: 3px solid #FF4081;
 
 }
 
@@ -41,12 +55,17 @@ th {
 .search-field {
   color: #FF4081;
   border:0.1em solid #FF4081;
-  font-size: 12pt;
+  font-size: 13pt;
 }
 
 .search-field:active, .search-field:hover, .search-field:focus {
   color: #FF4081;
   outline: none;
+}
+
+.home, .home:hover, .home:active, .home:focus {
+  color: #FF4081;
+  text-decoration: none;
 }
 
 .summary {
@@ -55,8 +74,4 @@ th {
   color: #FFFFFF;
   height: 40px;
   padding-top: 10px;
-}
-.emphasis {
-  font-size: 13pt;
-  font-weight: bold;
 }

@@ -1,28 +1,28 @@
-<section id="wrap">
+<section id="wrap"><br><br>
   <div class="container items center">
-      <h1>New Item</h1>
-      <%= form_for [@user, @item] do |p| %>
-        <%= p.label :title, class:"form-label" %></br>
-        <%= p.text_field :title, placeholder: "e.g. Fitbit", class:'form-control', autofocus: true %>
-        <br>
-        <%= p.label :category, class:"form-label" %>
-        <%= p.text_field :category, placeholder: "e.g. Fitness & Athletic Gear", class:'form-control' %>
-        <br>
-        <%= p.label :cost, class:"form-label" %>
-        <%= p.text_field :cost, placeholder: "e.g. 109", class:'form-control'%>
-        <br>
-        <%= p.label :note, class:"form-label" %>
-        <%= p.text_field :note, placeholder: "e.g. I love the Fitbit Alta in teal.", class:'form-control'%>
-        <br>
-        <%= p.label :seller, class:"form-label" %>
-        <%= p.text_field :seller, placeholder: "e.g. Fitbit", class:'form-control' %>
-        <br>
-        <%= p.label :link, class:"form-label" %>
-        <%= p.text_field :link, placeholder: "e.g. https://www.fitbit.com/alta", class:'form-control' %>
-        <br>
-        <div class="actions">
-          <%= link_to "CANCEL", user_path(@user), class: "btn-form" %>
-          <%= p.submit "CREATE", class: "btn-form cancel" %>
+    <h1>New Item</h1>
+    <%= form_for [@user, @item] do |p| %>
+      <%= p.label :title, class:"form-label" %></br>
+      <%= p.text_field :title, placeholder: "e.g. Fitbit", class:'form-control', autofocus: true %>
+      <br>
+      <%= p.label :category, class:"form-label" %>
+      <%= p.text_field :category, placeholder: "e.g. Fitness & Athletic Gear", class:'form-control' %>
+      <br>
+      <%= p.label :cost, class:"form-label" %>
+      <%= p.text_field :cost, placeholder: "e.g. 109", class:'form-control'%>
+      <br>
+      <%= p.label :note, class:"form-label" %>
+      <%= p.text_field :note, placeholder: "e.g. I love the Fitbit Alta in teal.", class:'form-control'%>
+      <br>
+      <%= p.label :seller, class:"form-label" %>
+      <%= p.text_field :seller, placeholder: "e.g. Fitbit", class:'form-control' %>
+      <br>
+      <%= p.label :link, class:"form-label" %>
+      <%= p.text_field :link, placeholder: "e.g. https://www.fitbit.com/alta", class:'form-control' %>
+      <br>
+      <div class="actions">
+        <%= link_to "CANCEL", user_path(@user), class: "btn-form" %>
+        <%= p.submit "CREATE", class: "btn-form submit" %>
       </div>
     <% end %>
   </div>

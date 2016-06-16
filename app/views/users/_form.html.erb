@@ -12,33 +12,33 @@
     </div>
   <% end %>
 
-    <%= f.label :username %><br>
+    <%= f.label :username, class:"form-label" %><br>
     <%= f.text_field :username %>
     </br>
-    <%= f.label :email %><br>
+    <%= f.label :email, class:"form-label" %><br>
     <%= f.text_field :email %>
     </br>
-    <%= f.label :first_name %><br>
+    <%= f.label :first_name, class:"form-label" %><br>
     <%= f.text_field :first_name %>
     </br>
-    <%= f.label :last_name %><br>
+    <%= f.label :last_name, class:"form-label" %><br>
     <%= f.text_field :last_name %>
     </br>
-    <%= f.label :birthday %><br>
+    <%= f.label :birthday, class:"form-label" %><br>
     <%= f.text_field :birthday %>
     </br>
-    <%= f.label :city %><br>
+    <%= f.label :city, class:"form-label" %><br>
     <%= f.text_field :city %>
     </br>
-    <%= f.label :state %><br>
+    <%= f.label :state, class:"form-label" %><br>
     <%= f.text_field :state %>
     </br>
-    <%= f.label :password %><br>
+    <%= f.label :password, class:"form-label" %><br>
     <%= f.password_field :password %>
     </br>
-    <%= f.label :password_confirmation %><br>
+    <%= f.label :password_confirmation, class:"form-label" %><br>
     <%= f.password_field :password_confirmation %>
     </br>
-    <%= f.submit %>
+    <%= f.submit "SIGN UP", class: "btn-form submit" %>
     </br>
 <% end %>
