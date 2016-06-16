@@ -103,6 +103,11 @@ Sets dropdown text color and background on hover
   text-align: justify;
 }
 
+.emphasis {
+  font-size: 13pt;
+  font-weight: bold;
+}
+
 ///// BUTTON STYLES /////
 .btn {
 	width: 200px;
@@ -121,14 +126,14 @@ Sets dropdown text color and background on hover
 	padding-left: 25px;
 	padding-right: 25px;
 	font-weight: 300;
-  color: #FFEBEE;
+  color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active:focus {
-	background-color: #FFEBEE;
-	border-color: #FFEBEE;
-	border:0.1em solid #FFEBEE;
+	background-color: #FFFFFF;
+	border-color: #FF4081;
+	border:0.1em solid #FF4081;
 	box-shadow: none;
 	outline: none;
 	color: #FF4081;
@@ -155,7 +160,7 @@ Sets dropdown text color and background on hover
 
 .btn-soft:hover, .btn-soft:focus, .btn-soft:active, .btn-soft:active:focus {
 	background-color: #FF4081;
-	border-color: #FF4081;
+	// border-color: #FF4081;
 	border:0.1em solid #FF4081;
 	box-shadow: none;
 	outline: none;
@@ -168,7 +173,7 @@ Sets dropdown text color and background on hover
   display: inline-block;
 }
 
-.cancel, .submit {
+.submit {
   background-color: #FF4081;
 }
 

@@ -5,15 +5,15 @@
     <div class="row">
     <% @user = current_user %>
       <div class="col-xs-12 center">
-        <div class="center">Hello <%= @user.username %>!</div>
+        <div class="center greeting"><span class="first-name">Hello <%= @user.first_name %>!</span><br>How can Wish List be of assitance today?<br>Please select <span class="emphasis">MY LIST</span> to create and manage your personal list or select <span class="emphasis">SEARCH</span> to browse all Wish Lists.</div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-6 center">
-        <%= link_to "My List", user_path(@user), class: "btn btn-primary" %>
+        <%= link_to "MY LIST", user_path(@user), class: "btn btn-primary" %>
       </div>
       <div class="col-xs-6 center">
-        <%= link_to "Search", users_path,  class: "btn btn-primary" %>
+        <%= link_to "SEARCH", users_path,  class: "btn btn-primary" %>
       </div>
     </div>
     <% else %>
@@ -38,10 +38,10 @@
     </div><!-- end info wrapper -->
     <div class="row btn-navigate">
       <div class="col-xs-6 center">
-        <%= link_to "Log In", new_session_path,  class: "btn btn-primary" %>
+        <%= link_to "LOG IN", new_session_path,  class: "btn btn-primary" %>
       </div>
       <div class="col-xs-6 center">
-        <%= link_to "Sign Up", new_user_path,  class: "btn btn-primary" %>
+        <%= link_to "SIGN UP", new_user_path,  class: "btn btn-primary" %>
       </div>
     </div>
   <% end %>

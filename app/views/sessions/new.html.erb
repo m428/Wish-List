@@ -4,15 +4,15 @@
       <h1 class="center">Sign In</h1>
         <%= form_tag sessions_path, method: :post do %>
           <div class="field center">
-            <%= label_tag :username %></br>
+            <div class="form-label">Username</div>
             <%= text_field_tag :username %>
           </div></br>
           <div class="field center">
-            <%= label_tag :password %></br>
+            <div class="form-label">Password</div>
             <%= password_field_tag :password %>
           </div></br>
           <div class="center">
-            <%= submit_tag "LOG IN", class: "submit btn-form" %>
+            <%= submit_tag "SUBMIT", class: "submit btn-form" %>
           </div>
         <% end %></br>
     </div>

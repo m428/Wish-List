@@ -10,7 +10,7 @@
 }
 
 h1{
-  color: #FFEBEE;
+  color: #FFFFFF;
   font-size: 28pt;
   font-family: 'Leckerli One', cursive;
 }
@@ -33,4 +33,9 @@ h1{
 
 .actions {
   padding-top: 2%;
+}
+
+.form-label {
+  border:0.1em solid #FF4081 !important;
+  color: #FFFFFF;
 }
