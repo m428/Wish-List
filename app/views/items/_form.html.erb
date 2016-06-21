@@ -1,0 +1,33 @@
+<div class="users"><br>
+<%= form_for [@user, @item] do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title, placeholder: "e.g. Fitbit", class: "center form-field" %>
+  <br>
+  <br>
+  <%= f.label :category %><br>
+  <%= f.text_field :category, placeholder: "e.g. Sports Gear", class: "center form-field" %>
+  <br>
+  <br>
+  <%= f.label :cost %><br>
+  <%= f.text_field :cost, placeholder: "e.g. 109", class: "center form-field" %>
+  <br>
+  <br>
+  <%= f.label :seller %><br>
+  <%= f.text_field :seller, placeholder: "e.g. Fitbit", class: "center form-field" %>
+  <br>
+  <br>
+  <%= f.label :link %><br>
+  <%= f.text_field :link, placeholder: "e.g. https://www.fitbit.com/alta", class: "center form-field" %>
+  <br>
+  <br>
+  <%= f.label :note %><br>
+  <%= f.text_field :note, placeholder: "e.g. I love the Fitbit Alta in teal.", class: "center form-field" %>
+  <br>
+  <br>
+  <div class="actions">
+    <%= link_to "CANCEL", user_path(@user), class: "btn-form submit" %>
+    <%= f.submit "SUBMIT", class: "btn-form submit" %>
+  </div><br>    <br>
+
+  <% end %>
+</div>

@@ -19,7 +19,11 @@
            <% end %>
            <% totNum = 0  %>
            <% totNum = user_items.count  %>
-          <div>There are <span class="emphasis"><%= " #{totNum} " %></span> items on your Wish List. The total cost of your Wish List is <span class=emphasis><%= "$#{totCost}" %></span>. </div>
+           <% if totNum == 1 %>
+              <div>There is <span class="emphasis"><%= " #{totNum} " %></span> item on your Wish List. The total cost of your item is <span class=emphasis><%= "$#{totCost}" %></span>. </div>
+          <% else %>
+              <div>There are <span class="emphasis"><%= " #{totNum} " %></span> items on your Wish List. The total cost of your items is <span class=emphasis><%= "$#{totCost}" %></span>. </div>
+          <% end %>
         </div>
       </div>
     </div>
@@ -45,7 +49,7 @@
     <div class="table-responsive center">
       <table class="table">
         <thead>
-          <tr class="table-row">
+          <tr class="table-row center">
             <th>ENTRY&nbsp;DATE</th>
             <th>ITEM</th>
             <th>CATEGORY</th>
