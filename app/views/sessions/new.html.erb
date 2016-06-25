@@ -1,20 +1,21 @@
-<section id="wrap" class="background">
-  <div class="container">
-    <div class="login-form">
-      <h1 class="center">Sign In</h1>
+<section id="wrap">
+  <div class="container center">
+    <h1 class="h1-form">Log&nbsp;In</h1>
+    <div class="users">
         <%= form_tag sessions_path, method: :post do %>
           <div class="field center">
-            <div class="form-label">Username</div>
-            <%= text_field_tag :username %>
+            <div class="form-label">Username</div><br>
+            <%= text_field_tag('username', nil, class: 'center form-field') %></span>
           </div></br>
           <div class="field center">
-            <div class="form-label">Password</div>
-            <%= password_field_tag :password %>
+            <div class="form-label">Password</div><br>
+            <%= password_field_tag('password', nil, class: 'center form-field')%>
           </div></br>
           <div class="center">
+            <%= link_to "CANCEL", root_url, class: "btn-form submit" %>
             <%= submit_tag "SUBMIT", class: "submit btn-form" %>
           </div>
         <% end %></br>
     </div>
-  </div>
+    </div>
 </section>

@@ -1,24 +1,16 @@
-<!-- <h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p> -->
-
 <section id="wrap"><br><br>
-  <div class="container items center">
-<h1 class="center title">Now Viewing:  <%= @item.title %></h1>
-
-<p class="top">DATE: <%= @item.created_at.strftime("%B %-d, %Y") %><br><br>
-<p>COST: <%= "$#{@item.cost}"%></p><br>
-<p>SELLER: <%= @item.seller %></p><br>
-<p>CATEGORY: <%= @item.category %></p><br>
-<p>NOTES: <%= @item.note %><br><br>
-<p>LINK: <%= @item.link %><br><br>
-
-
-
+  <div class="container users center">
+    <h1 class="center title">Now Viewing:  <%= @item.title %></h1><br>
+    <p>DATE: <%= @item.created_at.strftime("%B %-d, %Y") %><br><br>
+    <p>COST: <%= "$#{@item.cost}"%></p><br>
+    <p>SELLER: <%= @item.seller %></p><br>
+    <p>CATEGORY: <%= @item.category %></p><br>
+    <p>NOTES: <%= @item.note %><br><br>
+    <p>LINK: <%= @item.link %><br><br>
     <div class="row center">
-      <div class="col-xs-12 back">
-        <%= link_to "BACK ★彡", user_path(@user), class: "btn btn-form" %>
+      <div class="col-xs-12">
+        <%= link_to "BACK ★彡", user_path(@user), class: "btn-form submit" %>
       </div>
-    </div>
+    </div><br>
   </div>
-
 </section>

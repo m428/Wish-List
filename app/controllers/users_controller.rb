@@ -6,6 +6,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @user = User.search(params[:search])
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    else
+      @users = User.all.order('created_at DESC')
+    end
     render :index
   end
 
@@ -13,8 +19,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @item = Item.new
     @item.user_id = @user.id
-
-    @birthday = countdown
   end
 
   def new
@@ -31,16 +35,20 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+   redirect_to user_path(@user)
   end
 
   def destroy
   end
 
   private
-  
+
   def set_user
    	 @user = User.find(params[:id])
   end

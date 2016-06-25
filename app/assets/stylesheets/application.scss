@@ -81,9 +81,13 @@ Sets dropdown text color and background on hover
   margin-top: -50px; /* Negative value of footer height. */
   height: 50px;
   clear:both;
-  padding-top:20px;
+  padding-top:15px;
   background-color: #FF4081; //#FF80AB;
   color: #FFEBEE;
+}
+
+#footer p {
+  font-size: 11pt;
 }
 
  ///// BASIC STYLES /////
@@ -111,6 +115,7 @@ Sets dropdown text color and background on hover
 ///// BUTTON STYLES /////
 .btn {
 	width: 200px;
+  height: 50px;
 }
 
 .btn-primary {
@@ -139,35 +144,6 @@ Sets dropdown text color and background on hover
 	color: #FF4081;
 }
 
-
-
-.btn-soft {
-	font-size: 20px;
-	margin: auto;
-	text-align: center;
-	border-radius: 0px;
-	box-shadow: 1px 1px 1px #FFEBEE;
-	border:0.1em solid #FFEBEE;
-	background-color: #FFEBEE;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 25px;
-	padding-right: 25px;
-	font-weight: 300;
-  color: #FF4081;
-  font-family: 'Poppins', sans-serif;
-}
-
-.btn-soft:hover, .btn-soft:focus, .btn-soft:active, .btn-soft:active:focus {
-	background-color: #FF4081;
-	// border-color: #FF4081;
-	border:0.1em solid #FF4081;
-	box-shadow: none;
-	outline: none;
-	color: #FFEBEE;
-}
-
-
 ///// FORM BUTTONS /////
 .actions {
   display: inline-block;
@@ -175,6 +151,7 @@ Sets dropdown text color and background on hover
 
 .submit {
   background-color: #FF4081;
+  height: 50px;
 }
 
 .btn-form {
@@ -197,7 +174,6 @@ Sets dropdown text color and background on hover
   text-decoration: none;
   color: #84FFFF;
 }
-
 
 ///// ICONS /////
 .entry-icons img, .items-nved img {

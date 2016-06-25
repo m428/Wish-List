@@ -3,18 +3,44 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .users {
-  background-color: #FF4081;
+  background-color: #FFFFFF;
   padding-top: 1%;
   padding-bottom: 1%;
   width: 30%;
   margin-left: 38%;
   margin-right: 40%;
+  border: 4px solid #FF4081;
 }
 
 .h1-form {
-  color: #FFFFFF;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 30%;
+  margin-left: 38%;
+  margin-right: 40%;
+  color: #FF4081;
   font-family: 'Leckerli One', cursive;
+  // border-bottom: 4px solid #FF4081;
+  font-size: 42pt;
 }
+
+.form-field {
+  border-bottom: 1px solid #FF4081;
+  color: #FF4081;
+  outline: none;
+  border-right: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.form-label {
+  font-size: 12pt;
+  font-weight: bolder;
+}
+
 
 section {
   color: #FF4081;
@@ -31,8 +57,20 @@ th {
 
 .table-row {
   border-bottom: 3px solid #FF4081;
-
 }
+
+
+.user-table > thead > tr > th, .user-table > thead > tr > td, .user-table > tbody > tr > th, .user-table > tbody > tr > td, .user-table > tfoot > tr > th, .user-table > tfoot > tr > td {
+  border: none;
+  font-size: 14pt;
+  text-align: center;
+}
+
+.user-table-row {
+  // border-bottom: 3px solid #FF4081;
+  font-size: 16pt;
+}
+
 
 .list-view {
   margin-top: 3%;
@@ -53,6 +91,7 @@ th {
 }
 
 .search-field {
+  padding-top: 5px;
   color: #FF4081;
   border:0.1em solid #FF4081;
   font-size: 13pt;
@@ -74,4 +113,19 @@ th {
   color: #FFFFFF;
   height: 40px;
   padding-top: 10px;
+}
+
+.user-links a, .user-links a:hover, .user-links a:active, .user-links a:focus {
+  color: #FF4081;;
+  text-decoration: none;
+}
+
+///// ERROR MESSAGES /////
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#error-explanation {
+  padding: 5px;
 }
