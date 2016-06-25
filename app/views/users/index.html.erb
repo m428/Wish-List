@@ -1,2 +1,44 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<section id="wrap">
+  <div id="main" class="container">
+    <div class="row list-view">
+      <div class="col-xs-12 center">
+        <h1 class="list-h1">Browse Wish Lists</h1>
+      </div>
+    </div>
+    <!-- Add item and search items. -->
+    <div class="row list-actions">
+      <div class="col-xs-6 center">
+        <%= link_to "HOME ★彡", root_url, class: "home" %>
+      </div>
+      <div class="col-xs-6 center">
+        <span class="search-container">
+           <%= form_tag users_path(@user), :method => 'get' do %>
+             SEARCH <%= text_field_tag :search, params[:search], :placeholder => "  e.g. Fitbit", class: "search-field" %>
+           <% end %>
+         </span>
+      </div>
+      <div class="col-xs-12 center"><br>
+        <div> Browse all Wish Lists or search by user.  You can search by first name, last name, username, or email.</div>
+      </div>
+    </div>
+    <!-- All users. -->
+    <div class="table-responsive center">
+      <table class="table user-table">
+        <thead>
+          <tr class="table-row center">
+            <th>USER:</th>
+            <th>USER&nbsp;SINCE:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.limit(10).each do |user| %>
+          <tr>
+            <td class="user-links"><%= link_to user.first_name, user_path(user) %>&nbsp;<%= link_to user.last_name, user_path(user) %></td>
+            <td><%= user.created_at.strftime("%b %-d, %Y") %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div><!-- end container -->
+</section>

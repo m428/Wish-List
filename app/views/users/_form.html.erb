@@ -1,8 +1,7 @@
 <div class="users">
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
-  <!-- TODO style error messages -->
-    <div id="error_explanation">
+    <div id="error-explanation" class="center">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
       <ul>
       <% @user.errors.full_messages.each do |message| %>
@@ -11,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
     <%= f.label :username %><br>
     <%= f.text_field :username, class: "center form-field" %>
     <br>
@@ -29,10 +27,14 @@
     <br>
     <br>
     <%= f.label :birthday %><br>
-    <%= f.text_field :birthday, placeholder: "mm/dd/yyyy", class: "center form-field" %>
+    <% if @user.birthday == nil %>
+      <%= f.text_field :birthday, placeholder: "mm/dd/yyyy",  class: "center form-field" %>
+    <% else %>
+      <%= f.text_field :birthday, :value => @user.birthday.strftime("%m/%d/%Y"),  class: "center form-field" %>
+    <% end %>
     <br>
     <br>
-    <%= f.label :password %><br>
+    <%= f.label :set_password %><br>
     <%= f.password_field :password, class: "center form-field" %>
     <br>
     <br>
@@ -40,6 +42,17 @@
     <%= f.password_field :password_confirmation, class: "center form-field" %>
     <br>
     <br>
-    <%= f.submit "ENTER", class: "btn-form submit" %>
-<% end %>
+    <% if logged_in? %>
+      <div class="actions">
+        <%= link_to "CANCEL", user_path(@user), class: "btn-form submit" %>
+        <%= f.submit "SUBMIT", class: "btn-form submit" %>
+      </div>
+    <% else %>
+      <div class="actions">
+        <%= f.submit "SUBMIT", class: "btn-form submit" %>
+      </div>
+    <% end %>
+    <br>
+    <br>
+  <% end %>
 </div>

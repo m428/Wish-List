@@ -1,3 +1,7 @@
-<!-- <h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p> -->
-<%= render partial: "/users/item", locals: {user_items: @user.items} %>
+<section id="wrap">
+  <% if session[:user_id] == @user.id %>
+   <%= render partial: "/users/item1", locals: {user_items: @user.items} %>
+  <% else %>
+   <%= render partial: "/users/item2", locals: {user_items: @user.items} %>
+  <% end %>
+</section>
