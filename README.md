@@ -35,3 +35,13 @@ Once logged in an authenticated:
   * Log out
 
 ###Screenshots
+![Welcome](http://imgur.com/fpXYWG2)
+![Signup](http://imgur.com/ooGEKk3)
+![Home](http://imgur.com/0nLJ8gl)
+![Wish List](http://imgur.com/xGofMYe)
+![User Index](http://imgur.com/A22AIkG)
+
+
+#### Copyright notice:
+
+The media and information used in this app is for educational purposes. Project created by Mala Nimalasuriya.
