@@ -9,15 +9,15 @@ Wish List is an organizational tracking tool that allows users to track the thin
 
 ###Models
 * **User:**
-- Full CRUD
-- Must be authenticated to access create and browse lists
-- Has many items
-- Users may be searched by name, email, or username
+ - Full CRUD
+ - Must be authenticated to access create and browse lists
+ - Has many items
+ - Users may be searched by name, email, or username
 
 * **Item:**
-- full CRUD
-- belongs to one user
-- Items may be searched by title, cost, category, or seller
+ - full CRUD
+ - belongs to one user
+ - Items may be searched by title, cost, category, or seller
 
 
 ###User Stories
