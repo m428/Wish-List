@@ -14,7 +14,7 @@ Wish List is an organizational tracking tool that allows users to track the thin
 - Has many items
 - Users may be searched by name, email, or username
 
-* **Item**
+* **Item:**
 - full CRUD
 - belongs to one user
 - Items may be searched by title, cost, category, or seller
@@ -35,11 +35,11 @@ Once logged in an authenticated:
   * Log out
 
 ###Screenshots
-![Welcome](http://imgur.com/fpXYWG2)
-![Signup](http://imgur.com/ooGEKk3)
-![Home](http://imgur.com/0nLJ8gl)
-![Wish List](http://imgur.com/xGofMYe)
-![User Index](http://imgur.com/A22AIkG)
+![Welcome](http://imgur.com/fpXYWG2.png)
+![Signup](http://imgur.com/ooGEKk3.png)
+![Home](http://imgur.com/0nLJ8gl.png)
+![Wish List](http://imgur.com/xGofMYe.png)
+![User Index](http://imgur.com/A22AIkG.png)
 
 
 #### Copyright notice:
