@@ -1,7 +1,7 @@
 # Wish List
 
 Wish List is an organizational tracking tool that allows users to track the things they love and manage gift giving for any occasion.
-Check out the app [HERE](https://radiant-shore-84281.herokuapp.com/).
+View the app on Heroku [HERE](https://radiant-shore-84281.herokuapp.com/).
 
 ###Technologies:
 * Built with Ruby on Rails
