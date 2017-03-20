@@ -3,12 +3,12 @@
 Wish List is an organizational tracking tool that allows users to track the things they love and manage gift giving for any occasion.
 View the app on Heroku [HERE](https://radiant-shore-84281.herokuapp.com/).
 
-###Technologies:
+### Technologies:
 * Built with Ruby on Rails
 * Database using PostgreSQL
 * Bootstrap
 
-###Models
+### Models
 * **User:**
  - Full CRUD
  - Must be authenticated to access create and browse lists
@@ -21,7 +21,7 @@ View the app on Heroku [HERE](https://radiant-shore-84281.herokuapp.com/).
  - Items may be searched by title, cost, category, or seller
 
 
-###User Stories
+### User Stories
 
 A user of Wish List is able to:
   * Log in or Sign up
@@ -35,7 +35,7 @@ Once logged in an authenticated:
   * Edit his or her account information
   * Log out
 
-###Screenshots
+### Screenshots
 ![Welcome](http://imgur.com/fpXYWG2.png)
 ![Signup](http://imgur.com/ooGEKk3.png)
 ![Home](http://imgur.com/0nLJ8gl.png)
